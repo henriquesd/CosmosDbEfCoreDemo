@@ -1,0 +1,193 @@
+@CosmosDbEfCoreDemo.API_HostAddress = https://localhost:7132
+
+POST {{CosmosDbEfCoreDemo.API_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "productId": "df7f99f1-48d4-439a-9520-028d54bd287c",
+  "name": "Surface Pro 9",
+  "category": "Laptop",
+   "dimensions": {
+    "height": "0.879kg",
+    "width": "28.7cm",
+    "depth": "20.9cm"
+  },
+  "shippingOptions": [
+    {
+      "cost": 2.99,
+      "method": "Standard"
+    },
+    {
+      "cost": 4.99,
+      "method": "Express"
+    }
+  ],
+  "suppliers": [
+    {
+      "supplierId": "31d287b1-bab3-45c6-a9c5-e49eddcc1384",
+      "name": "Supplier 1",
+      "contactEmail": "supplier1@demo.com"
+    },
+    {
+      "supplierId": "96e3d261-f032-46fa-bb8d-96c0ccf9abe3",
+      "name": "Supplier 2",
+      "contactEmail": "supplier2@demo.com"
+    },
+    {
+      "supplierId": "f62f4b72-9a4e-4220-9147-a928a34c6cb0",
+      "name": "Supplier 3",
+      "contactEmail": "supplier3@demo.com"
+    }
+  ],
+  "inventory": {
+    "inventoryId": "45f01e3e-1a90-4db0-bfde-e00b7ed2ded5",
+    "stockQuantity": 100,
+    "lastRestocked": "2024-03-08T19:59:47.777Z"
+  }
+}
+
+###
+
+POST {{CosmosDbEfCoreDemo.API_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "productId": "b323e0d4-cd4c-49be-a6eb-40da4957aa5e",
+  "name": "Acer Predator Helios 18",
+  "category": "Laptop",
+  "dimensions": {
+    "height": "3.25kg",
+    "width": "40.5cm",
+    "depth": "31.16cm"
+  },
+  "shippingOptions": [
+    {
+      "cost": 2.99,
+      "method": "Standard"
+    },
+    {
+      "cost": 4.99,
+      "method": "Express"
+    }
+  ],
+  "suppliers": [
+    {
+      "supplierId": "31d287b1-bab3-45c6-a9c5-e49eddcc1384",
+      "name": "Supplier 4",
+      "contactEmail": "supplier4@demo.com"
+    },
+    {
+      "supplierId": "96e3d261-f032-46fa-bb8d-96c0ccf9abe3",
+      "name": "Supplier 5",
+      "contactEmail": "supplier5@demo.com"
+    }
+  ],
+  "inventory": {
+    "inventoryId": "02f7cace-e68e-4f5d-aceb-e9ec79eb0541",
+    "stockQuantity": 80,
+    "lastRestocked": "2024-03-05T19:59:47.777Z"
+  }
+}
+
+###
+
+POST {{CosmosDbEfCoreDemo.API_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "productId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "name": "Galaxy Watch5 Pro",
+  "category": "Smartwatch",
+  "dimensions": {
+    "height": "0.46g",
+    "width": "0.45mm",
+    "depth": "11mm"
+  },
+  "shippingOptions": [
+    {
+      "cost": 2.99,
+      "method": "Standard"
+    },
+    {
+      "cost": 4.99,
+      "method": "Express"
+    }
+  ],
+  "suppliers": [
+    {
+      "supplierId": "f62f4b72-9a4e-4220-9147-a928a34c6cb0",
+      "name": "Supplier 6",
+      "contactEmail": "supplier6@demo.com"
+    }
+  ],
+  "inventory": {
+    "inventoryId": "e90eb39a-1b96-40e8-938b-7fe95d4ee623",
+    "stockQuantity": 50,
+    "lastRestocked": "2024-03-04T19:59:47.777Z"
+  }
+}
+
+###
+
+PUT {{CosmosDbEfCoreDemo.API_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "productId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "name": "Galaxy Watch6",
+  "category": "Smartwatch",
+  "dimensions": {
+    "height": "29g",
+    "width": "0.40mm",
+    "depth": "9mm"
+  },
+  "shippingOptions": [
+    {
+      "cost": 2.99,
+      "method": "Standard 2"
+    },
+    {
+      "cost": 4.99,
+      "method": "Express 2"
+    }
+  ],
+  "suppliers": [
+    {
+      "supplierId": "f62f4b72-9a4e-4220-9147-a928a34c6cb0",
+      "name": "Supplier 6.1",
+      "contactEmail": "supplier61@demo.com"
+    },
+    {
+      "supplierId": "ea1db49a-800d-4bf0-8658-e6b42973ea08",
+      "name": "Supplier 7",
+      "contactEmail": "supplier7@demo.com"
+    }
+  ],
+  "inventory": {
+    "inventoryId": "e90eb39a-1b96-40e8-938b-7fe95d4ee623",
+    "stockQuantity": 9999,
+    "lastRestocked": "2024-03-04T19:59:47.777Z"
+  }
+}
+
+###
+
+GET {{CosmosDbEfCoreDemo.API_HostAddress}}/api/products/df7f99f1-48d4-439a-9520-028d54bd287c
+Accept: application/json
+
+###
+
+DELETE {{CosmosDbEfCoreDemo.API_HostAddress}}/api/products/df7f99f1-48d4-439a-9520-028d54bd287c
+Accept: application/json
+
+###
+
+DELETE {{CosmosDbEfCoreDemo.API_HostAddress}}/api/products/b323e0d4-cd4c-49be-a6eb-40da4957aa5e
+Accept: application/json
+
+###
+      
+DELETE {{CosmosDbEfCoreDemo.API_HostAddress}}/api/products/3fa85f64-5717-4562-b3fc-2c963f66afa6
+Accept: application/json
+
+###
